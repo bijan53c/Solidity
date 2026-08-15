@@ -1,5 +1,5 @@
 # Solidity
-My solidity homeworks (Might add any web3 stuff here later on)
+Public Solidity learning journal — from basics to Web3 security research
 
 # Ticket.sol
 > It's a simple scenario for basic solidity training

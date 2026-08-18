@@ -6,7 +6,7 @@ contract Counter {
   
   address public owner;
 
-  uint256 public ticketPrice = 0.01 ether;
+  uint256 public ticketPrice = 0.01 ether; //Finney 10
 
   function increment() external onlyOwner{
     count += 1;
@@ -33,5 +33,13 @@ contract Counter {
     require(msg.sender == owner, "Not the venue");
     _;
   }
+
+  function withdraw() external onlyOwner {
+    uint256 amount = address(this).balance;
+    (bool success, ) = owner.call {value: amount}("");
+    require(success, "withdraw failed");
+  }
+
+
 }
 

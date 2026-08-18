@@ -1,7 +1,7 @@
 # Solidity
 Public Solidity learning journal — from basics to Web3 security research
 
-# Ticket.sol
+# Ticket.sol 18.08.2026
 > It's a simple scenario for basic solidity training
 
 Imagine there's an event with limited tickets to sell.
@@ -14,5 +14,8 @@ Imagine there's an event with limited tickets to sell.
   - No underpayment neither an overpayment
 
 This is what this contract do so far.
+
+*18.08.2026 change*
+- Added withdraw function, now owner can withdraw the made balance from the contract
 
 ------

@@ -8,8 +8,8 @@ Imagine a coffee shop with a blockchain based loyalty points. So this token is t
 The owner deploys and mints total tokens at same point and start of the job.
 Currently it is not done yet but... The goal is to:
 - [x] Show CFC balance of each wallet
-- [ ] Send other wallets (Customers) CFC transaction
-- [ ] Other wallets (customers/users) can send CFC to any other wallet
+- [x] Send other wallets (Customers) CFC transaction
+- [x] Other wallets (customers/users) can send CFC to any other wallet
   - Which can mean to use their loyalty points
   - or send it to friend of theirs
 

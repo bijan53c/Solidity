@@ -1,14 +1,19 @@
 # Solidity
 Public Solidity learning journal — from basics to Web3 security research
 
-
-# SimpleStorage.sol 05.09.2026
+# SimpleStorage 
 As the name shows, simple smart contract that lets users store strings with their desired number ID on the blockchain
 Currently the data gets stored both in an array(list) and a mapping(dictionary).
-And there's work to do:
-- [ ] I gotta make the mapping storage owner based, so some one else won't replace another user's ID and string data
-- [ ] Make a return on the index of the list so user know what index has saved the data
-- [ ] Sketch out the main project that I'm gonna use this, which will determine the data type and real use scenario
+## 07.09.2026
+I kept the faulty and bugged codes I had so you can walkthrough the path I went, for learning the security and applying ownership and cleaning my code, which I hope it appears valuable even as tiny as possible.
+the timeline is like this 
+1. SimpleStorageFaulty.sol
+2. SimpleStorageBug.sol --> More of security issue than bad code
+3. SimpleStorageMain.sol --> Latest functioning version
+
+   
+- SimpleStorage.sol 05.09.2026
+  - Early practicing version, only practicing a scenario of storing data on solidity, using mapping and arrays by user inputs
 
 
 # CFC.sol 19.08.2026

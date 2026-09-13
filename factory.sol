@@ -8,11 +8,13 @@ contract ContractFactory {
     SimpleStorage[] ListOfSimpleStorageContracts;
 
 
-    
+    event NewSimpleStorageMade(address _AddressString);
     function ContractBuilder() public {
         SimpleStorage NewSimpleStorage = new SimpleStorage();
         ListOfSimpleStorageContracts.push(NewSimpleStorage);
+        emit NewSimpleStorageMade(address (NewSimpleStorage));
     }
+
     //Writes to deployed new contract
     function sfStore(uint256 _SimpleStorageIndex,  string memory _DATA, uint256 _ID) public {
         //Address

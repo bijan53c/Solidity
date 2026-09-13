@@ -21,7 +21,7 @@ contract ContractFactory {
     }
 
     //reads from deployed contract
-    //function SfGet (uint256 _ssindex, uint256 _SimpleStorageDataID) public view returns(string memory) {
-    //    return ListOfSimpleStorageContracts[_ssindex].DataIdToData(_SimpleStorageDataID);
-    //}
+    function SfGet (uint256 _SimpleStorageDataID, uint256 _ID) public view returns(string memory, address) {
+        return ListOfSimpleStorageContracts[_SimpleStorageDataID].DataIdToData(_ID);
+    }
 }

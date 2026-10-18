@@ -1,5 +1,11 @@
 # Solidity
 Public Solidity learning journal — from basics to Web3 security research
+I share my learnings here, you can use [[https://github.com/bijan53c/Solidity/blob/main/Solidity_Learning_Notes.md]], to learn from my experience
+
+> You can explore my different projects and practices per file and folder in following order:
+
+# FundMe
+Practicing Libraries, funding a smart contract by users, ETH transactions ,withdrawing funds by owner and ...
 
 # SimpleStorage 
 As the name shows, simple smart contract that lets users store strings with their desired number ID on the blockchain

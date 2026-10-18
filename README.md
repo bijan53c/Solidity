@@ -1,6 +1,6 @@
 # Solidity
 Public Solidity learning journal — from basics to Web3 security research
-I share my learnings here, you can use [https://github.com/bijan53c/Solidity/blob/main/Solidity_Learning_Notes.md](My learning notes), to learn from my experience
+I share my learnings here, you can use [My notes](https://github.com/bijan53c/Solidity/blob/main/Solidity_Learning_Notes.md), to learn from my experiences and tests, beside the available code files.
 
 > You can explore my different projects and practices per file and folder in following order:
 

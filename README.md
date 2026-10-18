@@ -2,12 +2,12 @@
 Public Solidity learning journal — from basics to Web3 security research
 I share my learnings here, you can use [My notes](https://github.com/bijan53c/Solidity/blob/main/Solidity_Learning_Notes.md), to learn from my experiences and tests, beside the available code files.
 
-> You can explore my different projects and practices per file and folder in following order:
+**You can explore my different projects and practices per file and folder in following order:**
 
-# FundMe
+## /FundMe/
 Practicing Libraries, funding a smart contract by users, ETH transactions ,withdrawing funds by owner and ...
 
-# SimpleStorage 
+## /SimpleStorage/
 As the name shows, simple smart contract that lets users store strings with their desired number ID on the blockchain
 Currently the data gets stored both in an array(list) and a mapping(dictionary).
 ## 07.09.2026
@@ -22,7 +22,7 @@ the timeline is like this
   - Early practicing version, only practicing a scenario of storing data on solidity, using mapping and arrays by user inputs
 
 
-# CFC.sol 19.08.2026
+## CFC.sol 19.08.2026
 Basic solidity based token on ERC20 standard and a work at hand
 Imagine a coffee shop with a blockchain based loyalty points. So this token is that imaginary dream coffee shop loyalty point OK?
 *So it's **Coffee Coin** aka **CFC***
@@ -34,7 +34,7 @@ Currently it is not done yet but... The goal is to:
   - Which can mean to use their loyalty points
   - or send it to friend of theirs
 
-# Ticket.sol 18.08.2026
+## Ticket.sol 18.08.2026
 > It's a simple scenario for basic solidity training
 
 Imagine there's an event with limited tickets to sell.

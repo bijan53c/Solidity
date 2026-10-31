@@ -1,29 +1,36 @@
-// users fund
-// withdraw fun
-// minimum funding value in USD
-
-import {PriceConverter} from "./PriceConverter.sol";
 
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.18;
 
+
+import {PriceConverter} from "./PriceConverter.sol";
+
+error NotOwner();
+
 contract FundMe {
     using PriceConverter for uint256;
 
-    uint256 public minimumUsd = 5e18;
+    uint256 public constant MINIMUM_USD = 5e18;
 
     address[] public funders;
     mapping(address funder => uint256 amountFunded) public addressToAmountFunded;
 
+
+    address public immutable i_owner;
+    constructor() {
+        i_owner = msg.sender;
+    }
+
+
     // public functon with payable keyword making it payable u know :))
     function fund() public payable {      
-        require (msg.value.getConversionRate() > minimumUsd,"Didn't send enough ETH"); // 1ETH = 1e18 = 100000000000000000 wei
+        require (msg.value.getConversionRate() > MINIMUM_USD,"Didn't send enough ETH"); // 1ETH = 1e18 = 100000000000000000 wei
         funders.push(msg.sender);
         addressToAmountFunded[msg.sender] += msg.value;
     }
 
 
-    function withdraw() public {
+    function withdraw() public onlyOnwer {
         //for (/*starting index,ending index, step amount*/)
         for (uint256 funderIndex=0; funderIndex< funders.length; funderIndex = funderIndex +1){
             address funder = funders[funderIndex];
@@ -56,5 +63,15 @@ contract FundMe {
 
     }
 
-
+    modifier onlyOnwer() {
+        //require(msg.sender== i_owner, "Not owner Biach!");
+        if(msg.sender != i_owner) {revert NotOwner();}
+        _;
+    }
+    receive() external payable { 
+        fund();
+    }
+    fallback() external payable { 
+        fund();
+    }
 }
